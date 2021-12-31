@@ -56,7 +56,7 @@ int main(int argc, const char * argv[]) {
     
     std::cout << "The block result: " << myblock(a, b) << std::endl;
     std::cout << "a  " << a << "  addr: " << &a << std::endl; 
-    std::cout << "b  " << b << "  addr: " << &b << std::endl; 
+    std::cout << "b  " << b << "  addr: " << &b << " sizeof(b) " << sizeof(b) << std::endl; 
     std::cout << "c  " << c << "  addr: " << &c << std::endl; 
     int* pc = &c;
     std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
