@@ -59,8 +59,6 @@ int main(int argc, const char * argv[]) {
     std::cout << "a  " << a << "  addr: " << &a << std::endl; 
     std::cout << "b  " << b << "  addr: " << &b << std::endl; 
     std::cout << "c  " << c << "  addr: " << &c << std::endl; 
-    pc = &c;
-    std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
     std::cout << "d  " << d << "  addr: " << &d << std::endl; 
 
     ///////////////////////////////
@@ -74,8 +72,6 @@ int main(int argc, const char * argv[]) {
     std::cout << "a  " << a << "  addr: " << &a << std::endl; 
     std::cout << "b  " << b << "  addr: " << &b << std::endl; 
     std::cout << "c  " << c << "  addr: " << &c << std::endl; 
-    pc = &c;
-    std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
     std::cout << "d  " << d << "  addr: " << &d << std::endl; 
 
     ///////////////////////////////
@@ -89,13 +85,12 @@ int main(int argc, const char * argv[]) {
     std::cout << "a  " << a << "  addr: " << &a << std::endl; 
     std::cout << "b  " << b << "  addr: " << &b << std::endl; 
     std::cout << "c  " << c << "  addr: " << &c << std::endl; 
-    pc = &c;
-    std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
     std::cout << "d  " << d << "  addr: " << &d << std::endl;
 
     // Shenanigans
 
     c = 0;
+    std::cout << "c  " << c << "  addr: " << &c << std::endl; 
 
     char* e = (char*)&b - sizeof(b);
     //std::cout << "szb" << sizeof(b) << std::endl;
@@ -103,6 +98,8 @@ int main(int argc, const char * argv[]) {
 
     char* f = (char*)e - sizeof(b);
     std::cout << "f  " << (int)(*f) << "  addr: " << (int*)f << std::endl;
+
+    std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
 
     return 0;
 }
