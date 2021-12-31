@@ -95,6 +95,8 @@ int main(int argc, const char * argv[]) {
 
     // Shenanigans
 
+    c = 0;
+
     char* e = (char*)&b - sizeof(b);
     //std::cout << "szb" << sizeof(b) << std::endl;
     std::cout << "e  " << (int)(*e) << "  addr: " << (int*)e << std::endl;
