@@ -91,7 +91,16 @@ int main(int argc, const char * argv[]) {
     std::cout << "c  " << c << "  addr: " << &c << std::endl; 
     pc = &c;
     std::cout << "pc " << *pc << "  addr: " << pc << std::endl; 
-    std::cout << "d  " << d << "  addr: " << &d << std::endl; 
+    std::cout << "d  " << d << "  addr: " << &d << std::endl;
+
+    // Shenanigans
+
+    char* e = (char*)&b - sizeof(b);
+    //std::cout << "szb" << sizeof(b) << std::endl;
+    std::cout << "e  " << (int)(*e) << "  addr: " << (int*)e << std::endl;
+
+    char* f = (char*)e - sizeof(b);
+    std::cout << "f  " << (int)(*f) << "  addr: " << (int*)f << std::endl;
 
     return 0;
 }
