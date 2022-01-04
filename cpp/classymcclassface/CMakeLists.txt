@@ -1,4 +1,4 @@
-set(TGTNAME blockhead_cpp)
+set(TGTNAME classymcclassface)
 
 if(LINUX)
     SET(CMAKE_CXX_FLAGS -fblocks)
@@ -9,4 +9,3 @@ add_executable(${TGTNAME} main.cpp)
 
 target_link_libraries(${TGTNAME} ${LINK_LIBS})
 
-add_subdirectory(classymcclassface)
